@@ -1,9 +1,13 @@
 <script>
 import { store } from "../store.js" //state management
 import register from "../debug" //per debuggare il componente da console
+import jumbo from "../components/jumbo.vue"
 
 export default {
     name: "appHeader",
+    components: {
+        jumbo
+    },
     data() {
         return {
             store
@@ -47,6 +51,7 @@ export default {
                 </div>
             </div>
         </div>
+        <jumbo></jumbo>
     </header>
 </template>
 <style scoped lang="scss">
@@ -62,6 +67,7 @@ export default {
     }
 }
 
+
 #event-banner {
     background-color: #F5F5F5;
     padding: 1rem;
@@ -69,10 +75,12 @@ export default {
     justify-content: center;
     align-items: center;
 
-    .main-btn {
-        margin-left: 1rem;
-        @include main-button()
-    }
+
+}
+
+.main-btn {
+    margin-left: 1rem;
+    @include main-button()
 }
 
 .header-logo {

@@ -6,11 +6,16 @@ export default {
     name: "jumbo",
     data() {
         return {
-            store
+            store,
+            mouseX: 0,
+            mouseY: 0
         }
     },
     methods: {
-
+        updateCoordinates(event) {
+            this.mouseX = event.clientX / 150;
+            this.mouseY = event.clientY / 70;
+        },
     },
     mounted() {
         register(this); //per debuggare il componente da console
@@ -19,7 +24,7 @@ export default {
 }
 </script>
 <template>
-    <div class="jumbo d-flex justify-content-center align-items-center">
+    <div @mousemove="updateCoordinates" class="jumbo d-flex justify-content-center align-items-center">
         <div class="title-wrapper z-1 text-center">
             <h2 class="italic">Hello, I'm Matin</h2>
             <h2>Artist coaching and mentor might be for you</h2>
@@ -32,6 +37,12 @@ export default {
         <img class="position-absolute z-0 shape-5" src="../assets/images/artist-shape-05-300x198.png" alt="">
         <img class="position-absolute z-0 shape-6" src="../assets/images/maxcoach-shape-12-100x100.png" alt="">
         <img class="position-absolute z-0 shape-7" src="../assets/images/artist-hero-image-03.png" alt="">
+        <img :style="{ left: 15.37 + mouseX + '%', top: 14.47 + mouseY + '%' }" class="position-absolute z-0 shape-8"
+            src="../assets/images/artist-hero-image-02-232x300.jpg" alt="">
+        <img :style="{ left: 10 - mouseX + '%', top: 50 - mouseY + '%' }" class="position-absolute z-0 shape-9"
+            src="../assets/images/artist-hero-image-01.jpg" alt="">
+        <img :style="{ left: 70 - mouseX + '%', top: 30 - mouseY + '%' }" class="position-absolute z-0 shape-10"
+            src="../assets/images/artist-hero-image-04.jpg" alt="">
     </div>
 </template>
 <style scoped lang="scss">
@@ -106,6 +117,21 @@ export default {
         top: 52%;
         left: 25%;
         width: 14%;
+    }
+
+    .shape-8 {
+        width: 20%;
+        box-shadow: 7px 9px 15px 5px gray;
+    }
+
+    .shape-9 {
+        width: 15%;
+        box-shadow: 7px 9px 15px 5px gray;
+    }
+
+    .shape-10 {
+        width: 22%;
+        box-shadow: 7px 9px 15px 5px gray;
     }
 }
 </style>

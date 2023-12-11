@@ -1,5 +1,4 @@
 <script>
-import AppComponent from "./components/AppComponent.vue"
 import appHeader from "./components/appHeader.vue"
 
 import axios from 'axios'; //importo Axios
@@ -7,7 +6,6 @@ import { store } from "./store.js" //state management
 
 export default {
 	components: {
-		AppComponent,
 		appHeader
 	},
 	data() {
@@ -35,9 +33,7 @@ export default {
 <template>
 	<appHeader />
 	<main>
-		<AppComponent />
 
-		<button class="btn btn-primary">Primary button</button>
 	</main>
 </template>
 
@@ -47,10 +43,9 @@ export default {
 </style>
 
 <style scoped lang="scss">
-// importo variabili
-// @use './styles/partials/variables' as *;
+@use './styles/partials/variables' as *;
 
-// ...qui eventuale SCSS di App.vue
+
 main {
 	padding: 1rem;
 }

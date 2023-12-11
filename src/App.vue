@@ -1,12 +1,14 @@
 <script>
 import AppComponent from "./components/AppComponent.vue"
+import appHeader from "./components/appHeader.vue"
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
 
 export default {
 	components: {
-		AppComponent
+		AppComponent,
+		appHeader
 	},
 	data() {
 		return {
@@ -31,6 +33,7 @@ export default {
 </script>
 
 <template>
+	<appHeader />
 	<main>
 		<AppComponent />
 

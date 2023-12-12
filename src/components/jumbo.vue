@@ -32,6 +32,8 @@ export default {
         </div>
         <img class="position-absolute z-0 shape-1" src="../assets/images/artist-shape-01-300x288.png" alt="">
         <img class="position-absolute z-0 shape-2" src="../assets/images/artist-shape-02-300x162.png" alt="">
+        <img class="position-absolute z-0 stain-1" src="../assets/images/stain.svg" alt="">
+        <img class="position-absolute z-0 stain-2" src="../assets/images/stain-2.svg" alt="">
         <img class="position-absolute z-0 shape-3" src="../assets/images/artist-shape-03-201x300.png" alt="">
         <img class="position-absolute z-0 shape-4" src="../assets/images/artist-shape-04-127x300.png" alt="">
         <img class="position-absolute z-0 shape-5" src="../assets/images/artist-shape-05-300x198.png" alt="">
@@ -43,11 +45,11 @@ export default {
             src="../assets/images/artist-hero-image-01.jpg" alt="">
         <img :style="{ left: 70 - mouseX + '%', top: 30 - mouseY + '%' }" class="position-absolute z-0 shape-10"
             src="../assets/images/artist-hero-image-04.jpg" alt="">
+
     </div>
 </template>
 <style scoped lang="scss">
 @use '../styles/partials/variables' as *;
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
 @mixin main-button {
     background-color: $mainBtn;
@@ -59,9 +61,12 @@ export default {
     }
 }
 
+template {}
+
 .jumbo {
     height: 90vh;
     position: relative;
+    background-color: #FBF9F6;
 
 
     .title-wrapper {
@@ -69,8 +74,9 @@ export default {
     }
 
     .italic {
-        font-family: 'Dancing Script', cursive;
+        font-family: 'Rossela-Demo';
         color: $hoveredMainBtn;
+        font-size: 3rem;
     }
 
     .main-btn {
@@ -78,9 +84,9 @@ export default {
     }
 
     .shape-1 {
-        top: 1%;
-        left: 42%;
-        width: 52%;
+        top: 0%;
+        left: 54%;
+        width: 40%;
     }
 
     .shape-2 {
@@ -89,8 +95,20 @@ export default {
         width: 45%;
     }
 
+    .stain-1 {
+        top: 58%;
+        left: 0%;
+        width: 15%;
+    }
+
+    .stain-2 {
+        top: 80%;
+        left: 66%;
+        width: 6%;
+    }
+
     .shape-3 {
-        top: 14%;
+        top: 8%;
         left: 0%;
         width: 25%;
     }
@@ -102,19 +120,19 @@ export default {
     }
 
     .shape-5 {
-        top: 71%;
+        top: 63%;
         left: 74%;
         width: 23%;
     }
 
     .shape-6 {
-        top: 73%;
+        top: 70%;
         left: 70%;
         width: 12%;
     }
 
     .shape-7 {
-        top: 52%;
+        top: 50%;
         left: 25%;
         width: 14%;
     }

@@ -1,12 +1,14 @@
 <script>
 import appHeader from "./components/appHeader.vue"
+import classFeatures from "./components/classFeatures.vue"
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
 
 export default {
 	components: {
-		appHeader
+		appHeader,
+		classFeatures
 	},
 	data() {
 		return {
@@ -33,7 +35,7 @@ export default {
 <template>
 	<appHeader />
 	<main>
-
+		<classFeatures />
 	</main>
 </template>
 
@@ -44,6 +46,7 @@ export default {
 
 <style scoped lang="scss">
 @use './styles/partials/variables' as *;
+
 
 
 main {

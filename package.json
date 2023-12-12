@@ -1,7 +1,7 @@
 {
-  "name": "vue-scaffold",
-  "private": true,
-  "version": "0.0.0",
+  "name": "vue-artist",
+  "private": false,
+  "version": "0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",

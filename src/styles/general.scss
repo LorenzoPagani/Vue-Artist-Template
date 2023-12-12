@@ -1,17 +1,19 @@
-//Importo le variabili per l'utilizzo all'interno di QUESTO file
+
 @use './partials/_variables.scss' as *;
 
-//Importo bootstrap per l'utilizzo nell'app
 @import "bootstrap/scss/bootstrap";
 
-/* @font-face {
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+@font-face {
     font-family: 'Rossela-Demo';
-    src: url('../assets/fonts/Rossela-Demo.woff2') format('woff2'),
-        url('../assets/fonts/Rossela-Demo.woff') format('woff');
+    src: url('./assets/fonts/Rossela-Demo.woff2') format('woff2'),
+        url('./assets/fonts/Rossela-Demo.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-} */
+}
+
 
 * {
     margin: 0;
@@ -20,6 +22,6 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family:  'Questrial';
     
 }

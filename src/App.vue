@@ -1,6 +1,8 @@
 <script>
 import appHeader from "./components/appHeader.vue"
 import classFeatures from "./components/classFeatures.vue"
+import appVideo from "./components/appVideo.vue"
+import courseCatalogue from "./components/courseCatalogue.vue"
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
@@ -8,7 +10,9 @@ import { store } from "./store.js" //state management
 export default {
 	components: {
 		appHeader,
-		classFeatures
+		classFeatures,
+		appVideo,
+		courseCatalogue
 	},
 	data() {
 		return {
@@ -36,6 +40,8 @@ export default {
 	<appHeader />
 	<main>
 		<classFeatures />
+		<appVideo />
+		<courseCatalogue />
 	</main>
 </template>
 

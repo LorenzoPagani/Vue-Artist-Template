@@ -3,6 +3,8 @@ import appHeader from "./components/appHeader.vue"
 import classFeatures from "./components/classFeatures.vue"
 import appVideo from "./components/appVideo.vue"
 import courseCatalogue from "./components/courseCatalogue.vue"
+import testimonials from "./components/testimonials.vue"
+
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
@@ -12,7 +14,9 @@ export default {
 		appHeader,
 		classFeatures,
 		appVideo,
-		courseCatalogue
+		courseCatalogue,
+		testimonials,
+
 	},
 	data() {
 		return {
@@ -41,6 +45,8 @@ export default {
 	<main>
 		<classFeatures />
 		<appVideo />
+
+		<testimonials />
 		<courseCatalogue />
 	</main>
 </template>

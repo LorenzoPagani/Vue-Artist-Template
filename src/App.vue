@@ -7,6 +7,7 @@ import testimonials from "./components/testimonials.vue"
 import appBlog from "./components/appBlog.vue"
 import events from "./components/events.vue"
 import newsletterForm from "./components/newsletterForm.vue"
+import appFooter from "./components/appFooter.vue"
 
 
 import axios from 'axios'; //importo Axios
@@ -22,6 +23,7 @@ export default {
 		appBlog,
 		events,
 		newsletterForm,
+		appFooter
 
 	},
 	data() {
@@ -56,6 +58,7 @@ export default {
 	</main>
 	<footer>
 		<newsletterForm />
+		<appFooter />
 	</footer>
 </template>
 

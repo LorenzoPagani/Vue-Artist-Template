@@ -41,7 +41,7 @@ export default {
 section {
     background-color: #244186;
     overflow: hidden;
-    margin: 10rem 0;
+    margin: 10rem 0 0 0;
     position: relative;
 }
 

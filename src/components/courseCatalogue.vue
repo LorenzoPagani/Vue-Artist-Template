@@ -63,7 +63,7 @@ export default {
 }
 </script>
 <template>
-    <div class="wrapper text-center ">
+    <div id="catalogue" class="wrapper text-center ">
         <img :style="{ left: 25.37 + store.mouseX + '%', top: 50.47 + store.mouseY + '%' }"
             class="position-absolute shape-1 " src="../assets/images/artist-shape-01.png" alt="">
         <h2 class="italic ">Artist coaching</h2>

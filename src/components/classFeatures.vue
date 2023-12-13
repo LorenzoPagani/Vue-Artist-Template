@@ -19,7 +19,7 @@ export default {
 }
 </script>
 <template>
-    <div class="container">
+    <div id="features" class="container">
         <img class="background-1" src="../assets/images/maxcoach-shape-03.png" alt="">
         <img class="background-2" src="../assets/images/stain-3.svg" alt="">
         <img class="background-3" src="../assets/images/artist-shape-01.png" alt="">

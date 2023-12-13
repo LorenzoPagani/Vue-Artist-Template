@@ -34,7 +34,7 @@ export default {
 }
 </script>
 <template>
-    <section>
+    <section id="testimonials">
         <img class="wave" src="../assets/images/wave.svg" alt="">
         <div class="container text-center">
             <div class="title-wrapper">

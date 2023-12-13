@@ -33,20 +33,19 @@ export default {
         </div>
         <div class="container">
             <div class="row nav-bar p-3">
-                <a href="#" class="header-logo col-4">
+                <a href="#" class="header-logo col">
                     <img src="../assets/images/dark-logo.png" alt="">
                 </a>
-                <div class="col-4">
+                <div class="col">
                     <nav class="d-flex">
-                        <!-- toDo: add dropdown -->
-                        <a href="#">features </a>
-                        <a href="#">testimonials </a>
-                        <a href="#">catalogue </a>
-                        <a href="#">blog </a>
-                        <a href="#">events </a>
+                        <a class="mx-3" href="#features">features </a>
+                        <a class="mx-3" href="#testimonials">testimonials </a>
+                        <a class="mx-3" href="#catalogue">catalogue </a>
+                        <a class="mx-3" href="#blog">blog </a>
+                        <a class="mx-3" href="#events">events </a>
                     </nav>
                 </div>
-                <div class="col-4 socials">
+                <div class="col socials">
                     <a href="#"><i class="fa-brands fa-twitter text-dark mx-2" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook-f text-dark mx-2" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram text-dark mx-2" aria-hidden="true"></i></a>
@@ -74,6 +73,11 @@ a {
     &:hover {
         color: $mainBtn;
     }
+}
+
+nav {
+    text-align: center;
+    font-weight: 800;
 }
 
 #event-banner {

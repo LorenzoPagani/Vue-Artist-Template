@@ -19,7 +19,7 @@ export default {
 }
 </script>
 <template>
-    <div class="container position-relative">
+    <div id="events" class="container position-relative">
         <img :style="{ left: 3.5 + store.mouseX + '%', top: 25.47 + store.mouseY + '%' }" class="position-absolute shape-1"
             src="../assets/images/stain.svg" alt="">
         <img :style="{ left: 7.5 - store.mouseX + '%', top: 25.47 - store.mouseY + '%' }" class="position-absolute  shape-1"

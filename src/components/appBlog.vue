@@ -19,7 +19,7 @@ export default {
 }
 </script>
 <template>
-    <div class="wrapper">
+    <div id="blog" class="wrapper">
         <div class="container">
             <div class="title-wrapper text-center">
                 <h2 class="italic">Articles and Tips</h2>

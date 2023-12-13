@@ -6,6 +6,7 @@ import courseCatalogue from "./components/courseCatalogue.vue"
 import testimonials from "./components/testimonials.vue"
 import appBlog from "./components/appBlog.vue"
 import events from "./components/events.vue"
+import newsletterForm from "./components/newsletterForm.vue"
 
 
 import axios from 'axios'; //importo Axios
@@ -20,6 +21,7 @@ export default {
 		testimonials,
 		appBlog,
 		events,
+		newsletterForm,
 
 	},
 	data() {
@@ -37,9 +39,7 @@ export default {
 		// });
 	},
 	methods: {
-		doThings() {
-			console.log("App.vue does things");
-		}
+
 	}
 }
 </script>
@@ -54,6 +54,9 @@ export default {
 		<appBlog />
 		<events />
 	</main>
+	<footer>
+		<newsletterForm />
+	</footer>
 </template>
 
 <style lang="scss">

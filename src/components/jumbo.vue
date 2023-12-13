@@ -7,15 +7,11 @@ export default {
     data() {
         return {
             store,
-            mouseX: 0,
-            mouseY: 0
+
         }
     },
     methods: {
-        updateCoordinates(event) {
-            this.mouseX = event.clientX / 150;
-            this.mouseY = event.clientY / 70;
-        },
+
     },
     mounted() {
         register(this); //per debuggare il componente da console
@@ -24,26 +20,26 @@ export default {
 }
 </script>
 <template>
-    <div @mousemove="updateCoordinates" class="jumbo d-flex justify-content-center align-items-center">
+    <div class="jumbo d-flex justify-content-center align-items-center">
         <div class="title-wrapper z-1 text-center">
             <h2 class="italic">Hello, I'm Matin</h2>
             <h2 class="fw-bold">Artist coaching and mentor might be for you</h2>
             <button class="btn main-btn">Get started today</button>
         </div>
-        <img class="position-absolute z-0 shape-1" src="../assets/images/artist-shape-01-300x288.png" alt="">
-        <img class="position-absolute z-0 shape-2" src="../assets/images/artist-shape-02-300x162.png" alt="">
-        <img class="position-absolute z-0 stain-1" src="../assets/images/stain.svg" alt="">
-        <img class="position-absolute z-0 stain-2" src="../assets/images/stain-2.svg" alt="">
-        <img class="position-absolute z-0 shape-3" src="../assets/images/artist-shape-03-201x300.png" alt="">
-        <img class="position-absolute z-0 shape-4" src="../assets/images/artist-shape-04-127x300.png" alt="">
-        <img class="position-absolute z-0 shape-5" src="../assets/images/artist-shape-05-300x198.png" alt="">
-        <img class="position-absolute z-0 shape-6" src="../assets/images/maxcoach-shape-12-100x100.png" alt="">
-        <img class="position-absolute z-0 shape-7" src="../assets/images/artist-hero-image-03.png" alt="">
-        <img :style="{ left: 15.37 + mouseX + '%', top: 14.47 + mouseY + '%' }" class="position-absolute z-0 shape-8"
-            src="../assets/images/artist-hero-image-02-232x300.jpg" alt="">
-        <img :style="{ left: 10 - mouseX + '%', top: 50 - mouseY + '%' }" class="position-absolute z-0 shape-9"
+        <img class="position-absolute  shape-1" src="../assets/images/artist-shape-01-300x288.png" alt="">
+        <img class="position-absolute  shape-2" src="../assets/images/artist-shape-02-300x162.png" alt="">
+        <img class="position-absolute  stain-1" src="../assets/images/stain.svg" alt="">
+        <img class="position-absolute  stain-2" src="../assets/images/stain-2.svg" alt="">
+        <img class="position-absolute  shape-3" src="../assets/images/artist-shape-03-201x300.png" alt="">
+        <img class="position-absolute  shape-4" src="../assets/images/artist-shape-04-127x300.png" alt="">
+        <img class="position-absolute  shape-5" src="../assets/images/artist-shape-05-300x198.png" alt="">
+        <img class="position-absolute  shape-6" src="../assets/images/maxcoach-shape-12-100x100.png" alt="">
+        <img class="position-absolute  shape-7" src="../assets/images/artist-hero-image-03.png" alt="">
+        <img :style="{ left: 15.37 + store.mouseX + '%', top: 14.47 + store.mouseY + '%' }"
+            class="position-absolute  shape-8" src="../assets/images/artist-hero-image-02-232x300.jpg" alt="">
+        <img :style="{ left: 10 - store.mouseX + '%', top: 50 - store.mouseY + '%' }" class="position-absolute  shape-9"
             src="../assets/images/artist-hero-image-01.jpg" alt="">
-        <img :style="{ left: 70 - mouseX + '%', top: 30 - mouseY + '%' }" class="position-absolute z-0 shape-10"
+        <img :style="{ left: 70 - store.mouseX + '%', top: 30 - store.mouseY + '%' }" class="position-absolute  shape-10"
             src="../assets/images/artist-hero-image-04.jpg" alt="">
 
     </div>
@@ -138,17 +134,17 @@ export default {
     }
 
     .shape-8 {
-        width: 20%;
+        width: 16%;
         box-shadow: 7px 9px 15px 5px gray;
     }
 
     .shape-9 {
-        width: 15%;
+        width: 11%;
         box-shadow: 7px 9px 15px 5px gray;
     }
 
     .shape-10 {
-        width: 22%;
+        width: 20%;
         box-shadow: 7px 9px 15px 5px gray;
     }
 }

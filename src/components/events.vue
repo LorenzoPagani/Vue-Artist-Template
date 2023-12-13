@@ -19,7 +19,13 @@ export default {
 }
 </script>
 <template>
-    <div class="container">
+    <div class="container position-relative">
+        <img :style="{ left: 3.5 + store.mouseX + '%', top: 25.47 + store.mouseY + '%' }" class="position-absolute shape-1"
+            src="../assets/images/stain.svg" alt="">
+        <img :style="{ left: 7.5 - store.mouseX + '%', top: 25.47 - store.mouseY + '%' }" class="position-absolute  shape-1"
+            src="../assets/images/maxcoach-shape-13-150x150.png" alt="">
+        <div class="circle position-absolute"
+            :style="{ right: -2.5 + store.mouseX + '%', top: + 60.47 - store.mouseY + '%' }"></div>
         <div class="title-wrapper text-center">
             <h2 class="italic">Upcoming Events</h2>
             <h2 class="fw-bold mb-5">Let's work together</h2>
@@ -28,7 +34,7 @@ export default {
             <div class="col-12 d-flex justify-content-around">
                 <div class="d-flex">
                     <figure class="overflow-hidden">
-                        <img src="../assets/images/artist-event-04-250x300.jpg" alt="">
+                        <img class="pic" src="../assets/images/artist-event-04-250x300.jpg" alt="">
                     </figure>
                     <div class="align-self-center p-5">
                         <p class="text-secondary my-1">APR 22, 2021 </p>
@@ -38,7 +44,7 @@ export default {
                 </div>
                 <div class="d-flex">
                     <figure class="overflow-hidden">
-                        <img src="../assets/images/artist-event-03-250x300.jpg" alt="">
+                        <img class="pic" src="../assets/images/artist-event-03-250x300.jpg" alt="">
                     </figure>
                     <div class="align-self-center p-5">
                         <p class="text-secondary my-1">OCT 10, 2020</p>
@@ -55,7 +61,7 @@ export default {
                         <p calss="text-secondary"> Hamburg, Germany</p>
                     </div>
                     <figure class="overflow-hidden">
-                        <img src="../assets/images/artist-event-02-250x300.jpg" alt="">
+                        <img class="pic" src="../assets/images/artist-event-02-250x300.jpg" alt="">
                     </figure>
                 </div>
                 <div class="d-flex">
@@ -65,7 +71,7 @@ export default {
                         <p calss="text-secondary">Illinois, US</p>
                     </div>
                     <figure class="overflow-hidden">
-                        <img src="../assets/images/artist-event-01-250x300.jpg" alt="">
+                        <img class="pic" src="../assets/images/artist-event-01-250x300.jpg" alt="">
                     </figure>
                 </div>
             </div>
@@ -74,6 +80,14 @@ export default {
 </template>
 <style scoped lang="scss">
 @use '../styles/partials/variables' as *;
+
+
+.circle {
+    height: 90px;
+    width: 90px;
+    border: 12px solid #ECC5AB;
+    border-radius: 50%;
+}
 
 .title-wrapper {
     width: 47%;
@@ -87,11 +101,17 @@ export default {
     color: $hoveredMainBtn;
 }
 
-img {
+.pic {
     transition: 1s;
 
     &:hover {
         transform: scale(1.2);
     }
+}
+
+.shape-1 {
+    width: 15%;
+    z-index: -1;
+
 }
 </style>

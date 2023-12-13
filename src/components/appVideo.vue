@@ -1,5 +1,14 @@
 <template>
     <div class="container d-flex justify-content-center ">
+        <img :style="{ left: 0.5 + store.mouseX + '%', top: -14.47 + store.mouseY + '%' }"
+            class="position-absolute z-0 shape-1" src="../assets/images/stain.svg" alt="">
+        <img :style="{ left: 0.5 - store.mouseX + '%', top: -14.47 - store.mouseY + '%' }"
+            class="position-absolute  shape-1" src="../assets/images/maxcoach-shape-05-150x150.png" alt="">
+        <div class="circle position-absolute"
+            :style="{ right: -2.5 + store.mouseX + '%', top: + 14.47 - store.mouseY + '%' }"></div>
+        <img :style="{ right: 2.5 - store.mouseX + '%', top: 65 - store.mouseY + '%' }" class="position-absolute  shape-1"
+            src="../assets/images/maxcoach-shape-12-150x150.png" alt="">
+
         <button @click="showVideo" id="btn">
             <img id="poster" src="../assets/images/artist-video-poster.jpg" alt="">
             <img id="youtube" src="../assets/images/icon-youtube-play.png" alt="">
@@ -7,7 +16,7 @@
         </button>
         <div v-if="videoVisible">
             <div id="video"></div>
-            <div id="overlay">
+            <div id="overlay" @click="closeVideo">
                 <div id="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/OMOga8x6aLk" frameborder="0"
                         allowfullscreen></iframe>
@@ -18,10 +27,13 @@
 </template>
   
 <script>
+import { store } from "../store.js" //state management
+
 export default {
     name: "appVideo",
     data() {
         return {
+            store,
             videoVisible: false,
         };
     },
@@ -29,28 +41,14 @@ export default {
         showVideo() {
             this.videoVisible = true;
         },
-        closeVideo(e) {
-            const video = this.$el.querySelector('#video');
-            const overlay = this.$el.querySelector('#overlay');
-            const videoContainer = this.$el.querySelector('#video-container');
-
-
-            if (!video.contains(e.target)) {
-                this.videoVisible = false;
-
-                videoContainer.innerHTML = '';
-            }
+        closeVideo() {
+            this.videoVisible = false;
         },
 
     },
     mounted() {
-        document.addEventListener('touchend', this.closeVideo);
-        document.addEventListener('mouseup', this.closeVideo);
     },
-    beforeDestroy() {
-        document.removeEventListener('touchend', this.closeVideo);
-        document.removeEventListener('mouseup', this.closeVideo);
-    },
+
 };
 </script>
   
@@ -58,6 +56,18 @@ export default {
 .container {
     margin-top: 10rem;
     margin-bottom: 10rem;
+    position: relative;
+}
+
+.shape-1 {
+    width: 15%;
+}
+
+.circle {
+    height: 90px;
+    width: 90px;
+    border: 12px solid #ECC5AB;
+    border-radius: 50%;
 }
 
 #overlay {

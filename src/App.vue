@@ -32,7 +32,7 @@ export default {
 		}
 	},
 	mounted() {
-		this.doThings();
+
 
 		// axios.get("indirizzo").then(risultato => {
 		// 	console.log(risultato);
@@ -41,25 +41,30 @@ export default {
 		// });
 	},
 	methods: {
-
+		updateCoordinates(event) {
+			store.mouseX = event.clientX / 300;
+			store.mouseY = event.clientY / 70;
+		},
 	}
 }
 </script>
 
 <template>
-	<appHeader />
-	<main>
-		<classFeatures />
-		<appVideo />
-		<testimonials />
-		<courseCatalogue />
-		<appBlog />
-		<events />
-	</main>
-	<footer>
-		<newsletterForm />
-		<appFooter />
-	</footer>
+	<div class="wrapper" @mousemove="updateCoordinates">
+		<appHeader />
+		<main>
+			<classFeatures />
+			<appVideo />
+			<testimonials />
+			<courseCatalogue />
+			<appBlog />
+			<events />
+		</main>
+		<footer>
+			<newsletterForm />
+			<appFooter />
+		</footer>
+	</div>
 </template>
 
 <style lang="scss">
@@ -69,10 +74,4 @@ export default {
 
 <style scoped lang="scss">
 @use './styles/partials/variables' as *;
-
-
-
-main {
-	padding: 1rem;
-}
 </style>

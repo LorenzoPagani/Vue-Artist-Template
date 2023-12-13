@@ -1,5 +1,6 @@
 import { reactive } from 'vue'
 
 export const store = reactive({
-    chiave: "valore"
-});
+  mouseX: 0,
+  mouseY: 0
+})

@@ -69,9 +69,13 @@ export default {
     </div>
     <div class="card-wrapper d-flex flex-wrap">
         <div v-for="card in courseCards" class="my-card">
-            <img class="w-100" :src="card.img" alt="">
-            <p>{{ card.price }}</p>
-            <p>{{ card.text }}</p>
+            <figure class="overflow-hidden">
+                <img class="w-100" :src="card.img" alt="">
+            </figure>
+            <div class="p-3 textbox">
+                <p class="price">{{ card.price }}</p>
+                <p>{{ card.text }}</p>
+            </div>
         </div>
     </div>
     <div class="text-center">
@@ -94,6 +98,26 @@ export default {
 .my-card {
     width: calc(100% / 4 - 4rem);
     margin: 1rem 2rem 0 2rem;
+    overflow: hidden;
+    transition: 1s;
+
+    .textbox {
+        background: white;
+    }
+
+    &:hover {
+
+        img {
+            transition: 1s;
+            transform: scale(1.2);
+        }
+
+        .textbox {
+            border: 1px solid $mainBtn;
+            position: relative;
+            bottom: 15%;
+        }
+    }
 }
 
 .btn {
@@ -106,5 +130,10 @@ export default {
         background-color: $mainBtn;
         color: white;
     }
+}
+
+.price {
+    color: $mainBtn;
+    font-weight: bold;
 }
 </style>

@@ -87,10 +87,9 @@ export default {
                 </h5>
                 <h5 class="mb-4">
                     I am happy with their arrangernent of
-                    lessons and subjects. They refiect a
+                    lessons and subjects. They reflect a
                     scientific investigation into effective
-                    methods to be adopted for learners of
-                    all levels.</h5>
+                    methods to be adopted for everyone.</h5>
                 <img src="../assets/images/artist-testimonial-avatar-03.jpg" alt="">
                 <div class="d-inline-block">
                     <p class="fw-bold">Luvic Dubble </p>
@@ -112,8 +111,8 @@ export default {
                 </h5>
                 <img src="../assets/images/artist-testimonial-avatar-02.jpg" alt="">
                 <div class="d-inline-block">
-                    <p class="fw-bold">Florence Themes </p>
-                    <p>/Multimedia Admin</p>
+                    <p class="fw-bold">Draco Malfoy</p>
+                    <p>/ Slytherin admin</p>
                 </div>
             </swiper-slide>
 
@@ -135,6 +134,8 @@ export default {
 }
 
 .mySwiper {
+
+
     .slide {
         height: 413px;
         width: 429px;

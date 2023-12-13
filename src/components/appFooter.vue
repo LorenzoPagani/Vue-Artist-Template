@@ -54,6 +54,7 @@ export default {
 
         </div>
     </div>
+    <div class="text-center mb-3 text-secondary">© 2020 Maxcoach. All Rights Reserved</div>
 </template>
 <style scoped lang="scss">
 @use '../styles/partials/variables' as *;
@@ -67,5 +68,14 @@ export default {
 li {
     margin: 1rem 0;
     color: gray;
+    cursor: pointer;
+
+    &:hover {
+        color: $mainBtn;
+    }
+}
+
+span {
+    color: $mainBtn;
 }
 </style>

@@ -39,11 +39,11 @@ export default {
                 <div class="col-4">
                     <nav class="d-flex">
                         <!-- toDo: add dropdown -->
-                        <a href="#">item </a>
-                        <a href="#">item </a>
-                        <a href="#">item </a>
-                        <a href="#">item </a>
-                        <a href="#">item </a>
+                        <a href="#">features </a>
+                        <a href="#">testimonials </a>
+                        <a href="#">catalogue </a>
+                        <a href="#">blog </a>
+                        <a href="#">events </a>
                     </nav>
                 </div>
                 <div class="col-4 socials">
@@ -70,6 +70,11 @@ export default {
     }
 }
 
+a {
+    &:hover {
+        color: $mainBtn;
+    }
+}
 
 #event-banner {
     background-color: #F5F5F5;

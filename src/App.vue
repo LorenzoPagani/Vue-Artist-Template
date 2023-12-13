@@ -4,6 +4,7 @@ import classFeatures from "./components/classFeatures.vue"
 import appVideo from "./components/appVideo.vue"
 import courseCatalogue from "./components/courseCatalogue.vue"
 import testimonials from "./components/testimonials.vue"
+import appBlog from "./components/appBlog.vue"
 
 
 import axios from 'axios'; //importo Axios
@@ -16,6 +17,7 @@ export default {
 		appVideo,
 		courseCatalogue,
 		testimonials,
+		appBlog,
 
 	},
 	data() {
@@ -45,9 +47,9 @@ export default {
 	<main>
 		<classFeatures />
 		<appVideo />
-
 		<testimonials />
 		<courseCatalogue />
+		<appBlog />
 	</main>
 </template>
 

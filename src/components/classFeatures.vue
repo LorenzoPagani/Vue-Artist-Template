@@ -27,7 +27,7 @@ export default {
         <div class="row justify-content-center align-items-center">
             <div class="col-12 text-center title-wrapper">
                 <h2 class="italic">Artist Coaching</h2>
-                <h3>I undestand what it takes to create. I can help you with</h3>
+                <h3 class="fw-bold">I undestand what it takes to create. I can help you with</h3>
             </div>
         </div>
         <div class="row">

@@ -38,12 +38,14 @@ export default {
 };
 </script>
   
-<style scoped>
+<style scoped lang="scss">
+@use '../styles/partials/variables' as *;
+
 p {
     font-size: 1.5rem;
     margin-bottom: 0;
     margin-left: 1rem;
-    color: #3F3A64;
+    color: $secondColor;
     font-weight: 800;
 }
 </style>

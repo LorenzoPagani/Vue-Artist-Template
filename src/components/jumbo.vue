@@ -27,7 +27,7 @@ export default {
     <div @mousemove="updateCoordinates" class="jumbo d-flex justify-content-center align-items-center">
         <div class="title-wrapper z-1 text-center">
             <h2 class="italic">Hello, I'm Matin</h2>
-            <h2>Artist coaching and mentor might be for you</h2>
+            <h2 class="fw-bold">Artist coaching and mentor might be for you</h2>
             <button class="btn main-btn">Get started today</button>
         </div>
         <img class="position-absolute z-0 shape-1" src="../assets/images/artist-shape-01-300x288.png" alt="">
@@ -61,7 +61,7 @@ export default {
     }
 }
 
-template {}
+
 
 .jumbo {
     height: 90vh;

@@ -2,11 +2,13 @@
 import { store } from "../store.js" //state management
 import register from "../debug" //per debuggare il componente da console
 import jumbo from "../components/jumbo.vue"
+import countdown from "../components/countdown.vue"
 
 export default {
     name: "appHeader",
     components: {
-        jumbo
+        jumbo,
+        countdown
     },
     data() {
         return {
@@ -26,7 +28,8 @@ export default {
     <header>
         <div id="event-banner">
             <!-- toDo: add countdown -->
-            Our biggest event starts tomorrow (inserire countdown) <button class="btn main-btn"> get ticket</button>
+            Our biggest event starts tomorrow
+            <countdown /> <button class="btn main-btn"> get ticket</button>
         </div>
         <div class="container">
             <div class="row nav-bar p-3">

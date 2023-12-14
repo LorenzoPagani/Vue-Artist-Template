@@ -9,42 +9,42 @@ export default {
             store,
             courseCards: [
                 {
-                    img: this.getImagePath("../assets/images/artist-course-01-480x480.jpg"),
+                    img: "../assets/images/artist-course-01-480x480.jpg",
                     price: "$18.00",
                     text: "The Acrylic Painting Academy"
                 },
                 {
-                    img: this.getImagePath("../assets/images/artist-course-02-480x480.jpg"),
+                    img: "../assets/images/artist-course-02-480x480.jpg",
                     price: "$18.00",
                     text: "Drawing and Shading: Complete Course"
                 },
                 {
-                    img: this.getImagePath("../assets/images/artist-course-03-480x480.jpg"),
+                    img: "../assets/images/artist-course-03-480x480.jpg",
                     price: "$18.00",
                     text: "The Color Theory for Digital Artist"
                 },
                 {
-                    img: this.getImagePath("../assets/images/artist-course-04-480x480.jpg"),
+                    img: "../assets/images/artist-course-04-480x480.jpg",
                     price: "$18.00",
                     text: "Ultimate Guide to Digital Sketching for Beginner"
                 },
                 {
-                    img: this.getImagePath("../assets/images/artist-course-05-480x480.jpg"),
+                    img: "../assets/images/artist-course-05-480x480.jpg",
                     price: "$18.00",
                     text: "Portrait Drawing The Smart Way"
                 },
                 {
-                    img: this.getImagePath("../assets/images/artist-course-06-480x480.jpg"),
+                    img: "../assets/images/artist-course-06-480x480.jpg",
                     price: "$18.00",
                     text: "Mastering Watercolor Painting from Beginner"
                 },
                 {
-                    img: this.getImagePath("../assets/images/artist-course-07-480x480.jpg"),
+                    img: "../assets/images/artist-course-07-480x480.jpg",
                     price: "$18.00",
                     text: "The Art & Science of Drawing"
                 },
                 {
-                    img: this.getImagePath("../assets/images/artist-course-08-480x480.jpg"),
+                    img: "../assets/images/artist-course-08-480x480.jpg",
                     price: "$18.00",
                     text: "The Colored Pencil Drawing Course"
                 },
@@ -72,7 +72,7 @@ export default {
     <div class="card-wrapper d-flex flex-wrap">
         <div v-for="card in courseCards" class="my-card">
             <figure class="overflow-hidden">
-                <img class="w-100" :src="card.img" alt="">
+                <img class="w-100" :src="getImagePath(card.img)" alt="">
             </figure>
             <div class="p-3 textbox">
                 <p class="price">{{ card.price }}</p>
@@ -112,18 +112,25 @@ export default {
 
     .textbox {
         background: white;
+        position: relative;
+        transition: 1s;
+        border: transparent;
+
+    }
+
+    img {
+        transition: 1s;
+
     }
 
     &:hover {
 
         img {
-            transition: 1s;
             transform: scale(1.2);
         }
 
         .textbox {
-            border: 1px solid $mainBtn;
-            position: relative;
+            border: $mainBtn 1px solid;
             bottom: 15%;
         }
     }

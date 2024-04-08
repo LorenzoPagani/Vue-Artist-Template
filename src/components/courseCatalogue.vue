@@ -9,42 +9,42 @@ export default {
             store,
             courseCards: [
                 {
-                    img: "../assets/images/artist-course-01-480x480.jpg",
+                    img: "artist-course-01-480x480.jpg",
                     price: "$18.00",
                     text: "The Acrylic Painting Academy"
                 },
                 {
-                    img: "../assets/images/artist-course-02-480x480.jpg",
+                    img: "artist-course-02-480x480.jpg",
                     price: "$18.00",
                     text: "Drawing and Shading: Complete Course"
                 },
                 {
-                    img: "../assets/images/artist-course-03-480x480.jpg",
+                    img: "artist-course-03-480x480.jpg",
                     price: "$18.00",
                     text: "The Color Theory for Digital Artist"
                 },
                 {
-                    img: "../assets/images/artist-course-04-480x480.jpg",
+                    img: "artist-course-04-480x480.jpg",
                     price: "$18.00",
                     text: "Ultimate Guide to Digital Sketching for Beginner"
                 },
                 {
-                    img: "../assets/images/artist-course-05-480x480.jpg",
+                    img: "artist-course-05-480x480.jpg",
                     price: "$18.00",
                     text: "Portrait Drawing The Smart Way"
                 },
                 {
-                    img: "../assets/images/artist-course-06-480x480.jpg",
+                    img: "artist-course-06-480x480.jpg",
                     price: "$18.00",
                     text: "Mastering Watercolor Painting from Beginner"
                 },
                 {
-                    img: "../assets/images/artist-course-07-480x480.jpg",
+                    img: "artist-course-07-480x480.jpg",
                     price: "$18.00",
                     text: "The Art & Science of Drawing"
                 },
                 {
-                    img: "../assets/images/artist-course-08-480x480.jpg",
+                    img: "artist-course-08-480x480.jpg",
                     price: "$18.00",
                     text: "The Colored Pencil Drawing Course"
                 },
@@ -53,7 +53,7 @@ export default {
     },
     methods: {
         getImagePath(img) {
-            return new URL(`${img}`, import.meta.url).href
+            return new URL(`../assets/images/${img}`, import.meta.url).href
         }
     },
     mounted() {

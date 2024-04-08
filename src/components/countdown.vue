@@ -1,13 +1,13 @@
 <template>
     <p>{{ countdown }}</p>
 </template>
-  
+
 <script>
 export default {
     data() {
         return {
             countdown: '',
-            countDownDate: new Date("dec 15, 2023 15:37:25").getTime(),
+            countDownDate: new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
         };
     },
     mounted() {
@@ -37,7 +37,7 @@ export default {
     },
 };
 </script>
-  
+
 <style scoped lang="scss">
 @use '../styles/partials/variables' as *;
 
@@ -49,4 +49,3 @@ p {
     font-weight: 800;
 }
 </style>
-  

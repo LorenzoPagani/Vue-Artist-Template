@@ -31,7 +31,7 @@ export default {
             </div>
         </div>
         <div class="row">
-            <div class="col-12 card-wrapper">
+            <div class="col-md-6 col-12 card-wrapper">
                 <div class="card align-self-start">
                     <img src="../assets/images/artist-box-image-01.png" alt="">
                     <h5>Online Courses</h5>
@@ -46,6 +46,9 @@ export default {
                         current state to help you improve your
                         ability.</p>
                 </div>
+            </div>
+            <div class="col-md-6 col-12 card-wrapper">
+
                 <div class="card align-self-start">
                     <img src="../assets/images/artist-box-image-03.png" alt="">
                     <h5>Anywhere</h5>
@@ -149,7 +152,7 @@ export default {
     display: flex;
     margin-top: 3rem;
     height: 250px;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .card {

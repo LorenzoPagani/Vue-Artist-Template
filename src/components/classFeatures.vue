@@ -71,7 +71,7 @@ export default {
 
             </div>
             <div class="col-5"></div>
-            <div class="col-5 text-center">
+            <div class="col-12 col-md-5 text-center">
                 <h2 class="bold">I coach and mentor
                     visual artists, like
                     you, to Create Like
@@ -80,7 +80,7 @@ export default {
                 <h2 class="italic">Martin Garrix</h2>
 
             </div>
-            <div class="col-7 px-5">
+            <div class="col-12 col-md-7 px-5">
                 <p class="small">As a coach and mentor, my ultimate goal is to motivate visual artists
                     toward inspired action. I help you get you back on track to being the
                     productive, creative, meaningful and authentic artist you truly want

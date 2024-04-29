@@ -19,7 +19,7 @@ export default {
 }
 </script>
 <template>
-    <div class="wrapper">
+    <div class="wrapper flex-column flex-md-row">
         <div class="me-5">
             <h6 class="fw-bold">Address</h6>
             <ul class="list-unstyled">

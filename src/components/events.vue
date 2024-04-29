@@ -106,6 +106,7 @@ export default {
 }
 
 .pic {
+    width: 100%;
     transition: 1s;
 
     &:hover {

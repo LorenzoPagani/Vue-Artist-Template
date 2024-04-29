@@ -50,7 +50,7 @@ export default {
 </script>
 
 <template>
-	<div class="wrapper" @mousemove="updateCoordinates">
+	<div class="wrapper overflow-x-hidden" @mousemove="updateCoordinates">
 		<appHeader />
 		<main>
 			<classFeatures />

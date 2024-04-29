@@ -6,26 +6,28 @@
             class="position-absolute  shape-1" src="../assets/images/maxcoach-shape-05-150x150.png" alt="">
         <div class="circle position-absolute"
             :style="{ right: -2.5 + store.mouseX + '%', top: + 14.47 - store.mouseY + '%' }"></div>
-        <img :style="{ right: 2.5 - store.mouseX + '%', top: 65 - store.mouseY + '%' }" class="position-absolute  shape-1"
-            src="../assets/images/maxcoach-shape-12-150x150.png" alt="">
+        <img :style="{ right: 2.5 - store.mouseX + '%', top: 65 - store.mouseY + '%' }"
+            class="position-absolute  shape-1" src="../assets/images/maxcoach-shape-12-150x150.png" alt="">
 
-        <button @click="showVideo" id="btn">
+        <button data-bs-toggle="modal" data-bs-target="#videoModal" id="btn">
             <img id="poster" src="../assets/images/artist-video-poster.jpg" alt="">
             <img id="youtube" src="../assets/images/icon-youtube-play.png" alt="">
 
         </button>
-        <div v-if="videoVisible">
-            <div id="video"></div>
-            <div id="overlay" @click="closeVideo">
-                <div id="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OMOga8x6aLk" frameborder="0"
-                        allowfullscreen></iframe>
+        <div class="modal fade" id="videoModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-transparent border-0">
+
+                    <div id="video-container ">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/OMOga8x6aLk" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
-  
+
 <script>
 import { store } from "../store.js" //state management
 
@@ -34,16 +36,9 @@ export default {
     data() {
         return {
             store,
-            videoVisible: false,
         };
     },
     methods: {
-        showVideo() {
-            this.videoVisible = true;
-        },
-        closeVideo() {
-            this.videoVisible = false;
-        },
 
     },
     mounted() {
@@ -51,7 +46,7 @@ export default {
 
 };
 </script>
-  
+
 <style scoped lang="scss">
 .container {
     margin-top: 10rem;
@@ -70,18 +65,6 @@ export default {
     border-radius: 50%;
 }
 
-#overlay {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    height: 100vh;
-    width: 100%;
-    background: black;
-}
 
 #btn {
     position: relative;
@@ -113,4 +96,3 @@ export default {
     }
 }
 </style>
-  

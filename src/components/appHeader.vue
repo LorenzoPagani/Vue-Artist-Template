@@ -27,7 +27,6 @@ export default {
 <template>
     <header>
         <div id="event-banner">
-            <!-- toDo: add countdown -->
             Our biggest event starts tomorrow
             <countdown /> <button class="btn main-btn"> get ticket</button>
         </div>
@@ -37,7 +36,7 @@ export default {
                     <img src="../assets/images/dark-logo.png" alt="">
                 </a>
                 <div class="col">
-                    <nav class="d-flex">
+                    <nav class="d-flex flex-column flex-md-row">
                         <a class="mx-3" href="#features">features </a>
                         <a class="mx-3" href="#testimonials">testimonials </a>
                         <a class="mx-3" href="#catalogue">catalogue </a>

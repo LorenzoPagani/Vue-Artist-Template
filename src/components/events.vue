@@ -20,10 +20,10 @@ export default {
 </script>
 <template>
     <div id="events" class="container position-relative">
-        <img :style="{ left: 3.5 + store.mouseX + '%', top: 25.47 + store.mouseY + '%' }" class="position-absolute shape-1"
-            src="../assets/images/stain.svg" alt="">
-        <img :style="{ left: 7.5 - store.mouseX + '%', top: 25.47 - store.mouseY + '%' }" class="position-absolute  shape-1"
-            src="../assets/images/maxcoach-shape-13-150x150.png" alt="">
+        <img :style="{ left: 3.5 + store.mouseX + '%', top: 25.47 + store.mouseY + '%' }"
+            class="position-absolute shape-1" src="../assets/images/stain.svg" alt="">
+        <img :style="{ left: 7.5 - store.mouseX + '%', top: 25.47 - store.mouseY + '%' }"
+            class="position-absolute  shape-1" src="../assets/images/maxcoach-shape-13-150x150.png" alt="">
         <div class="circle position-absolute"
             :style="{ right: -2.5 + store.mouseX + '%', top: + 60.47 - store.mouseY + '%' }"></div>
         <div class="title-wrapper text-center">
@@ -31,7 +31,7 @@ export default {
             <h2 class="fw-bold mb-5">Let's work together</h2>
         </div>
         <div class="row">
-            <div class="col-12 d-flex justify-content-around">
+            <div class="col-12 col-md-6 d-flex justify-content-around">
                 <div class="d-flex">
                     <figure class="overflow-hidden">
                         <img class="pic" src="../assets/images/artist-event-04-250x300.jpg" alt="">
@@ -42,6 +42,8 @@ export default {
                         <p calss="text-secondary">Texas, US</p>
                     </div>
                 </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-around">
                 <div class="d-flex">
                     <figure class="overflow-hidden">
                         <img class="pic" src="../assets/images/artist-event-03-250x300.jpg" alt="">
@@ -53,7 +55,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-around mt-5">
+            <div class="col-12 col-md-6 d-flex justify-content-around mt-5">
                 <div class="d-flex">
                     <div class="align-self-center p-5">
                         <p class="text-secondary my-1">NOV 23, 2020</p>
@@ -64,6 +66,8 @@ export default {
                         <img class="pic" src="../assets/images/artist-event-02-250x300.jpg" alt="">
                     </figure>
                 </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-around mt-5">
                 <div class="d-flex">
                     <div class="align-self-center p-5">
                         <p class="text-secondary my-1">DEC 15, 2020</p>
